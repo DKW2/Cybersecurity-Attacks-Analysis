@@ -1,0 +1,2 @@
+# Cybersecurity-Attacks-Analysis
+This project is my capstone project for UC Berkeley's MLAI bootcamp. For this project, I needed to come up with my own research question, find the data, and conduct modeling/analysis to answer my question. The full work and report can be found on this [notebook](https://github.com/DKW2/Cybersecurity-Attacks-Analysis/blob/main/Cybersecurity%20Attacks%20Analysis.ipynb).
