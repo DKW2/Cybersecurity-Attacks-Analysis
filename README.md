@@ -12,7 +12,7 @@ Impressively enough, all of our optimized models had a recall of 97% and higher 
 
 ![](images/precisionRecall.png)
 
-As we can see, KNN performed the best with Logistic Regression performing slightly worse than it.
+As we can see, KNN performed the best with Logistic Regression and SVC performing slightly worse than it.
 
 Now that we have trained our optimized models, I proceeded to examine each model for overlapping features that strongly impacted the model's predictions. This meant examining the branches in the decision tree, searching through the coefficients in the Logistic Regression model, and using permutation_importance to find the most important features. After I analyzed all 4 models, we can definitely see some stand-out impactful features that overlapped in all of them. These all involve either the packet details or the protocol used to send them. Below are some of the findings:
 * We found that "Time to live value" is very impactful in determining whether a packet is normal or malign. Lower values lead to normal packets while higher values point toward malignant packets.
