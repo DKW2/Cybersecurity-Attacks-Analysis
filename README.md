@@ -23,7 +23,7 @@ In essense, we can determine if a packet is normal or malignant by examining the
 
 Thus, through this project, I trained classification models that can accurately identify malignant packets while also discovering strong features that indicate whether a network packet is normal or malign.
 
-# Summmary
+# Summary
 
 With a dataset of network packets collected by the Australian Centre for Cyber Security, we trained multiple classification models to determine whether a network packet was normal or malign. Once trained, all of the models had pretty high performance, sporting 80% accuracy and around 97% recall. After training the models, we examined each model to find features that strongly impacted the models in their predictions. These features are strong indicators for normal or malign packets, allowing us to gain some insight on how these models work. From our analysis, we deduced that the strongest indicators for a network packet are the packet transmission details and utilized service/protocol. Malign packets and normal packets seem to utilize different protocols when being sent. In addition, while malign packets are usually small in size and try to last on the network for as long as possible, normal packets tend to be larger in size and are transferred more securely.
 
