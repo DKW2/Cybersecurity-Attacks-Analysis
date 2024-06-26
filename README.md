@@ -3,7 +3,7 @@
 **Derek Wang**
 
 ## Executive Summary
-This project is my capstone project for UC Berkeley's MLAI bootcamp. For this project, I needed to come up with my own research question, find the data, and conduct modeling/analysis to answer my question. For this project, I will be analyzing a dataset of network packets and identifying factors which determine if the packet is a cyberattack or not. The goal for the project is to train a classification model that will be able to accurately predict if a packet is normal or malign. The full work and report can be found on this [notebook](https://github.com/DKW2/Cybersecurity-Attacks-Analysis/blob/main/Cybersecurity%20Attacks%20Analysis.ipynb).
+This project is my capstone project for UC Berkeley's MLAI bootcamp. For this project, I needed to come up with my own research question, find the data, and conduct modeling/analysis to answer my question. I will be analyzing a dataset of network packets and identifying factors which determine if the packet is a cyberattack or not. The goal for the project is to train a classification model that will be able to accurately predict if a packet is normal or malign. The full work and report can be found on this [notebook](https://github.com/DKW2/Cybersecurity-Attacks-Analysis/blob/main/Cybersecurity%20Attacks%20Analysis.ipynb).
 
 ## Research Question
 Given a dataset of network packets, what factors strongly indicate whether the packet is malignant or not?
