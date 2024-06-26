@@ -2,22 +2,22 @@
 
 **Derek Wang**
 
-# Executive Summary
+## Executive Summary
 This project is my capstone project for UC Berkeley's MLAI bootcamp. For this project, I needed to come up with my own research question, find the data, and conduct modeling/analysis to answer my question. For this project, I will be analyzing a dataset of network packets and identifying factors which determine if the packet is a cyberattack or not. The goal for the project is to train a classification model that will be able to accurately predict if a packet is normal or malign. The full work and report can be found on this [notebook](https://github.com/DKW2/Cybersecurity-Attacks-Analysis/blob/main/Cybersecurity%20Attacks%20Analysis.ipynb).
 
-# Research Question
+## Research Question
 Given a dataset of network packets, what factors strongly indicate whether the packet is malignant or not?
 
-# Rationale
+## Rationale
 With our world becoming more and more digital, the amount of cyberattacks has increased dramatically. Malware, viruses, and other harmful programs can spread through the internet easily and steal private information from innocent people. While anti-virus systems have become a norm in our everyday systems, they still do not guarantee safety. Thus, if we were to have a model that can accurately predict whether a network packet is malignant or not, we can identify the features that determine its identity and advise people on how to protect themselves from the worst. In addition, we can also inform cybersecurity firms and developers on what to focus on.
 
-# Data Sources
+## Data Sources
 The dataset we're using comes from Kaggle [https://www.kaggle.com/datasets/mrwellsdavid/unsw-nb15]. The data is a synthetic dataset created by "Cyber Range Lab of the Australian Centre for Cyber Security (ACCS) for generating a hybrid of real modern normal activities and synthetic contemporary attack behaviours". It contains 2 million records of network packets labelled as either normal or malign. 
 
-# Methodology
+## Methodology
 I will be using classification models such as Logistic Regression and Decision Trees for this project to try to predict the identity of a network packet. In addition, if I have enough time, I wish to try to learn and utilize random forests to help create a more accurate model. Besides that, I will be using the techniques we've been taught in this class such as feature engineering and hyperparameter grid searching.
 
-# Report/Results
+## Report/Results
 Although the dataset has around 2 million records in total, the authors have also created a training and testing set of a total of 250,000 records. Thus, instead of utilizing every record, I used their train/test sets to lower the computation power. Starting with the training set, I first checked to see that the two classes are slightly unbalanced with a split of around 33-66 (normal, malign). I then proceeded to explore the data, taking note of categorical and numerical features as well as indentifying potential features to manipulate/remove. The features were all cleaned very well, so there wasn't much that needed to be done on my end. One feature that had to be removed was the "id" feature, since it's not a feature of the packet.
 
 Once I cleaned the data, I first created a baseline model to have a threshold for my models to beat. The model would always output "malign", resulting in a baseline accuracy of around 55% and recall of 100%. Once the baseline was established, I began training the classification models. For this project, I trained 4 different types of classification models: K-Nearest Neighbors (KNN), Logistic Regression, Support Vector Machines (SVC), and Decision Trees. For the first run, I trained all four models and optimized each one with hyperparameter searching. The scoring metric I chose was recall, since want to maximize the amount of malign packets we can identify. It's fine if we mistake a normal packet for a malign packet since we're just being careful. However, if we identify a malign packet as normal, there could be consequences. One small hiccup, however, was that training a decision tree using recall results in a model that is identical to the baseline model since both have a recall of 100%. Thus, it's more optimal to train the decision tree using accuracy instead. That's why in the following results, there will be 2 decision trees:
@@ -39,11 +39,11 @@ In essense, we can determine if a packet is normal or malignant by examining the
 
 Thus, through this project, I trained classification models that can accurately identify malignant packets while also discovering strong features that indicate whether a network packet is normal or malign.
 
-# Summary
+## Summary
 
 With a dataset of network packets collected by the Australian Centre for Cyber Security, we trained multiple classification models to determine whether a network packet was normal or malign. Once trained, all of the models had pretty high performance, sporting 80% accuracy and around 97% recall. After training the models, we examined each model to find features that strongly impacted the models in their predictions. These features are strong indicators for normal or malign packets, allowing us to gain some insight on how these models work. From our analysis, we deduced that the strongest indicators for a network packet are the packet transmission details and utilized service/protocol. Malign packets and normal packets seem to utilize different protocols when being sent. In addition, while malign packets are usually small in size and try to last on the network for as long as possible, normal packets tend to be larger in size and are transferred more securely.
 
-# Next Steps / Recommmendations
+## Next Steps / Recommmendations
 
 With such a high recall and accuracy for every model, a next step would be to utilize these classification models in cybersecurity tools that identify malign packets. This way, people can be more protected against malignant agents trying to steal their information or assets. Another way is just to inform cybersecurity experts about these results, discussing which features are strong indicators and seeking what their opinion is on the matter. This creates discussion and spreads discourse about identifying network packets, which will keep people's digital lives safer in the long run.
 
@@ -53,7 +53,7 @@ Besides that, another next step is focusing on creating more accurate models. Cu
 
 For recommendations, I would suggest people to use popular network protocols when transferring data. It's only when you start using less used protocols or access less secure sites/downloads when you begin to run across malignant network packets. For general folk, it would probably boil down to just being aware of the dangers of receiving suspicious advertisements or download links and not accessing insecure web sites.
 
-# Outline of project
+## Outline of project
 - [Link to notebook](https://github.com/DKW2/Cybersecurity-Attacks-Analysis/blob/main/Cybersecurity%20Attacks%20Analysis.ipynb)
 
 ## Contact and Further Information
